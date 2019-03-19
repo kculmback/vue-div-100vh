@@ -1,99 +1,27 @@
 {
-  "name": "react-div-100vh",
-  "version": "0.3.2",
-  "description": "A React component that aims to solve '100vh' issue in mobile browsers",
-  "main": "lib/index.js",
+  "name": "test",
+  "version": "0.1.0",
+  "private": true,
   "scripts": {
-    "dev": "concurrently \"npm run lib:watch\" \"npm run docs\"",
-    "lib": "babel src/lib -d lib --copy-files",
-    "lib:watch": "babel src/lib -w -d lib --copy-files",
-    "docs": "webpack-dev-server --mode development",
-    "docs:prod": "webpack --mode production",
-    "test": "node scripts/test.js --env=jsdom"
+    "serve": "vue-cli-service serve src/entries/main.js",
+    "build": "vue-cli-service build",
+    "build:bundle": "vue-cli-service build --target lib --name Vue100vh src/entries/component.js",
+    "lint": "vue-cli-service lint"
   },
-  "keywords": [],
-  "license": "MIT",
   "dependencies": {
-    "jest-get-type": "^22.4.3"
-  },
-  "peerDependencies": {
-    "react": ">15",
-    "react-dom": ">15"
+    "vue": "^2.6.6"
   },
   "devDependencies": {
-    "@babel/cli": "^7.0.0",
-    "@babel/core": "^7.0.0",
-    "@babel/plugin-proposal-class-properties": "^7.0.0",
-    "@babel/plugin-proposal-object-rest-spread": "^7.0.0",
-    "@babel/preset-env": "^7.0.0",
-    "@babel/preset-react": "^7.0.0",
-    "babel-core": "^7.0.0-bridge.0",
-    "babel-loader": "^8.0.0",
-    "concurrently": "^3.6.1",
-    "css-loader": "^0.28.11",
-    "html-webpack-plugin": "^3.2.0",
-    "husky": "^1.1.2",
-    "jest": "^23.5.0",
-    "lint-staged": "^7.3.0",
-    "prettier": "^1.14.3",
-    "raf": "^3.4.0",
-    "react": "^16.4.2",
-    "react-dom": "^16.4.2",
-    "react-test-renderer": "^16.5.2",
-    "style-loader": "^0.21.0",
-    "webpack": "^4.17.1",
-    "webpack-cli": "^2.1.5",
-    "webpack-dev-server": "^3.1.6"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
-  },
-  "lint-staged": {
-    "src/**/*.{js,jsx,json,css}": [
-      "prettier --single-quote --write",
-      "git add"
-    ]
-  },
-  "jest": {
-    "collectCoverageFrom": [
-      "src/**/*.{js,jsx,mjs}"
-    ],
-    "setupFiles": [
-      "<rootDir>/config/polyfills.js"
-    ],
-    "testMatch": [
-      "<rootDir>/src/**/__tests__/**/*.{js,jsx,mjs}",
-      "<rootDir>/src/**/?(*.)(spec|test).{js,jsx,mjs}"
-    ],
-    "testEnvironment": "node",
-    "testURL": "http://localhost",
-    "transform": {
-      "^.+\\.(js|jsx|mjs)$": "<rootDir>/node_modules/babel-jest",
-      "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
-      "^(?!.*\\.(js|jsx|mjs|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
-    },
-    "transformIgnorePatterns": [
-      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs)$"
-    ],
-    "moduleNameMapper": {
-      "^react-native$": "react-native-web"
-    },
-    "moduleFileExtensions": [
-      "web.js",
-      "js",
-      "json",
-      "web.jsx",
-      "jsx",
-      "node",
-      "mjs"
-    ]
-  },
-  "author": "Mikhail Vasin <michaelvasin@gmail.com>",
-  "homepage": "https://github.com/mvasin/react-div-100vh",
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:mvasin/react-div-100vh.git"
+    "@babel/preset-env": "7.3.4",
+    "@vue/cli-plugin-babel": "^3.5.0",
+    "@vue/cli-plugin-eslint": "^3.5.0",
+    "@vue/cli-service": "^3.5.0",
+    "@vue/eslint-config-standard": "^4.0.0",
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.8.0",
+    "eslint-plugin-vue": "^5.0.0",
+    "pug": "^2.0.3",
+    "pug-plain-loader": "^1.0.0",
+    "vue-template-compiler": "^2.5.21"
   }
 }
