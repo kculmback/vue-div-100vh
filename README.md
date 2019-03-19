@@ -29,13 +29,20 @@ Browse https://vue-div-100vh.netlify.com on your phone! -->
 ### The default behavior
 
 ```jsx
-import Vue100vh from 'vue-div-100vh'
-
-const MyFullscreenComponent = () => (
+<template>
   <Vue100vh>
     <marquee>Your stuff goes here</marquee>
   </Vue100vh>
-)
+</template>
+
+<script>
+import Vue100vh from 'vue-div-100vh'
+
+export default {
+  ...,
+  components: { Vue100vh },
+}
+</script>
 ```
 
 ### Using `rvh` units
