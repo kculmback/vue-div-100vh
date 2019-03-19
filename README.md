@@ -45,24 +45,24 @@ export default {
 </script>
 ```
 
-### Using `rvh` units
+### Using `vvh` units
 
-If you want to set `min-height` (or any other property) instead, you can use made up `rvh` ("real viewport height") units in values of an object passed to `style` prop. `Vue100vh` will find any style declarations with this unit and calculate the value as a percentage of `window.innerHeight`:
+If you want to set `min-height` (or any other property) instead, you can use made up `vvh` ("real viewport height") units in values of an object passed to `style` prop. `Vue100vh` will find any style declarations with this unit and calculate the value as a percentage of `window.innerHeight`:
 
 ```jsx
-  <Vue100vh :style="{ minHeight: '50rvh' }">
+  <Vue100vh :style="{ minHeight: '50vvh' }">
     <marquee>This is inside a div that takes at least 50% of viewport height.</marquee>
   </Vue100vh>
 ```
 
-If you don't specify `style` prop, it works as if you specified `{ height: '100rvh' }`;
-`<Vue100vh>` is equivalent to `<Vue100vh :style="{ height: '100rvh'} ">`.
+If you don't specify `style` prop, it works as if you specified `{ height: '100vvh' }`;
+`<Vue100vh>` is equivalent to `<Vue100vh :style="{ height: '100vvh'} ">`.
 
 If you do pass anything to the `style` prop, no implicit style is applied. You can do something like:
 
 ```jsx
 <Vue100vh
-  :style="{ maxHeight: '70rvh', color: 'blue'}"
+  :style="{ maxHeight: '70vvh', color: 'blue'}"
   @click.native="() => { console.log('hi') }"
 >
   <p>my content here</p>
