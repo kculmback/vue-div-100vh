@@ -24,7 +24,7 @@ Browse https://vue-div-100vh.netlify.com on your phone! -->
 
 ## API
 - Install it: `npm install --save vue-div-100vh` or `yarn add vue-div-100vh`
-- Import the component and wrap your stuff with `<Vue100vh>` as you would with a normal `<div style={{height: '100vh'}}>`, but this time mobile browsers should display the whole page on load:
+- Import the component and wrap your stuff with `<Vue100vh>` as you would with a normal `<div :style="{ height: '100vh' }">`, but this time mobile browsers should display the whole page on load:
 
 ### The default behavior
 
