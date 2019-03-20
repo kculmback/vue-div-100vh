@@ -1,6 +1,6 @@
 {
   "name": "vue-div-100vh",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A Vue component that aims to solve '100vh' issue in mobile browsers",
   "main": "dist/Vue100vh.common.js",
   "scripts": {
