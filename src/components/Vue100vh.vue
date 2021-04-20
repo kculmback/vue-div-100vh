@@ -12,7 +12,7 @@ export default {
     }
   },
   props: {
-    styles: {
+    style: {
       type: Object,
       default: () => ({ height: '100vvh' }),
     },
@@ -33,7 +33,7 @@ export default {
 
       // throwOnBadArgs(givenStyle, windowHeight)
 
-      const usedStyle = this.styles
+      const usedStyle = this.style
 
       const convertedStyle = {}
 

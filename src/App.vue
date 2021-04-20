@@ -1,6 +1,7 @@
 <template lang="pug">
   #app
-    vue100vh(:styles="thing")
+    vue100vh.main(:style="thing")
+      span Hey There
 </template>
 
 <script>
@@ -12,18 +13,19 @@ export default {
       thing: { minHeight: '100vvh' },
     }
   },
-  mounted () {
-    // setTimeout(() => {
-    //   this.thing = { minHeight: '50vvh' }
-    // }, 1000)
-    // setTimeout(() => {
-    //   this.thing = { minHeight: '70vvh' }
-    // }, 3000)
-  },
 }
 </script>
 
 <style>
-#app {
+html, body {
+  padding: 0;
+  margin: 0;
+}
+
+.main {
+  background: lightcoral;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 </style>
