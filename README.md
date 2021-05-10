@@ -6,6 +6,10 @@ This is a workaround for iOS Safari and other mobile browsers.
 
 Originally forked from [react-div-100vh](https://github.com/mvasin/react-div-100vh) by [mvasin](https://github.com/mvasin).
 
+## CSS Only Fix
+
+If you only need to be able to use `100vh`, then the [postcss-100vh-fix](https://github.com/postcss/postcss-100vh-fix) plugin may be a better solution.
+
 ## The problem
 
 At the top of the page, mobile browsers cover bottom of `100vh` page with "browser chrome" (that's the name for browser navigation/context buttons, don't confuse with the browser from Google), effectively cropping it. If you have something important at the bottom of your splash screen, chances are it will not be visible/available until user scrolls.
